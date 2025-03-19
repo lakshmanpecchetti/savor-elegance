@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, Phone, Facebook, Instagram, Twitter, X, MapPin, Clock, CalendarDays } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ReservationForm from './ReservationForm';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,10 +37,10 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <a href="#reservations" className="flex items-center gap-2 hover:text-restaurant-gold transition-colors">
+            <div className="flex items-center gap-2 hover:text-restaurant-gold transition-colors">
               <CalendarDays size={16} />
-              <span>Book a Table</span>
-            </a>
+              <ReservationForm />
+            </div>
             <div className="flex items-center gap-4">
               <a href="#" className="hover:text-restaurant-gold transition-colors">
                 <Facebook size={16} />
