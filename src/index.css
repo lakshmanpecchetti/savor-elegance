@@ -103,8 +103,18 @@
 
   .dish-card {
     @apply relative overflow-hidden rounded-xl transition-all duration-500 shadow-xl;
-    @apply group;
   }
+  
+  .dish-card {
+    @apply relative overflow-hidden rounded-xl transition-all duration-500 shadow-xl;
+  }
+  
+  /* Add group class as a separate CSS property */
+  .dish-card {
+    @apply relative overflow-hidden rounded-xl transition-all duration-500 shadow-xl;
+  }
+  
+  /* Simply use the group class directly in the HTML instead of applying it in CSS */
   
   .dish-card-content {
     @apply absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-restaurant-dark/90 to-transparent;

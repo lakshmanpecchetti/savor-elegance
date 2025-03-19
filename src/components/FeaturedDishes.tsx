@@ -39,7 +39,7 @@ const DishCard = ({ dish }: { dish: typeof featuredDishes[0] }) => {
   const { loaded, imgRef } = useLazyImageLoad(dish.image);
   
   return (
-    <div className="dish-card h-96 reveal">
+    <div className="dish-card group reveal">
       <img
         ref={imgRef}
         src={dish.image}
