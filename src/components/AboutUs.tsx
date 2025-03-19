@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { useRevealOnScroll, useCountUp } from '@/lib/animations';
-import { Award, Clock, Cook, Users } from 'lucide-react';
+import { Award, Clock, ChefHat, Users } from 'lucide-react';
 
 const AboutUs = () => {
   useRevealOnScroll();
   
   const statistics = [
     { id: 1, value: 15, label: "Years of Excellence", icon: Clock },
-    { id: 2, value: 12, label: "Expert Chefs", icon: Cook },
+    { id: 2, value: 12, label: "Expert Chefs", icon: ChefHat },
     { id: 3, value: 35, label: "Signature Dishes", icon: Award },
     { id: 4, value: 15000, label: "Happy Customers", icon: Users },
   ];
