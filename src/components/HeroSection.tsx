@@ -1,6 +1,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, CalendarDays, UtensilsCrossed } from 'lucide-react';
+import ReservationForm from './ReservationForm';
+import OrderForm from './OrderForm';
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -50,15 +52,9 @@ const HeroSection = () => {
             <span>Explore Menu</span>
           </a>
           
-          <a href="#reservations" className="btn-secondary flex items-center justify-center gap-2">
-            <CalendarDays size={18} />
-            <span>Reserve a Table</span>
-          </a>
+          <ReservationForm />
           
-          <a href="#order" className="btn-outline flex items-center justify-center gap-2">
-            <span>Order Online</span>
-            <ArrowRight size={18} />
-          </a>
+          <OrderForm />
         </div>
       </div>
       

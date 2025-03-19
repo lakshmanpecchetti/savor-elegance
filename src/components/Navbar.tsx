@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
-import { Menu, Phone, Facebook, Instagram, Twitter, X, MapPin, Clock, CalendarDays } from 'lucide-react';
+import { Menu, Phone, Facebook, Instagram, Twitter, X, MapPin, Clock, CalendarDays, ShoppingCart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ReservationForm from './ReservationForm';
+import OrderForm from './OrderForm';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,6 +40,10 @@ const Navbar = () => {
             <div className="flex items-center gap-2 hover:text-restaurant-gold transition-colors">
               <CalendarDays size={16} />
               <ReservationForm />
+            </div>
+            <div className="flex items-center gap-2 hover:text-restaurant-gold transition-colors">
+              <ShoppingCart size={16} />
+              <OrderForm />
             </div>
             <div className="flex items-center gap-4">
               <a href="#" className="hover:text-restaurant-gold transition-colors">
@@ -123,10 +127,14 @@ const Navbar = () => {
               <Clock size={16} />
               <span className="text-white">Open: 11:00 AM - 11:00 PM</span>
             </div>
-            <a href="#reservations" className="flex items-center gap-2 text-restaurant-gold mb-3" onClick={() => setIsMobileMenuOpen(false)}>
+            <div className="flex items-center gap-2 mb-3 text-restaurant-gold">
               <CalendarDays size={16} />
-              <span className="text-white">Book a Table</span>
-            </a>
+              <ReservationForm />
+            </div>
+            <div className="flex items-center gap-2 mb-3 text-restaurant-gold">
+              <ShoppingCart size={16} />
+              <OrderForm />
+            </div>
           </div>
 
           <ul className="flex flex-col gap-4">
